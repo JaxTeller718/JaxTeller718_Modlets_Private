@@ -1,0 +1,5 @@
+﻿Key,Source,Context,English
+HDHQ_AlpineWinterSeedPrefab,blocks,Block,Winter Pine Seed,,,,,
+HDHQ_DesertSeedPrefab,blocks,Block,Desert Tree Seed,,,,,
+HDHQ_PineSeedPrefab,blocks,Block,Pine Seed,,,,,
+HDHQ_FirPineSeedPrefab,blocks,Block,Douglas Fir Seed,,,,,

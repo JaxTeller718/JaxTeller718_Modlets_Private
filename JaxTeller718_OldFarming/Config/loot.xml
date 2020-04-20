@@ -1,0 +1,7 @@
+<JaxTeller718>
+
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsToolsCommon']">
+		<item name="meleeToolHoeIronSchematic" prob="0.8" />
+	</append>
+
+</JaxTeller718>

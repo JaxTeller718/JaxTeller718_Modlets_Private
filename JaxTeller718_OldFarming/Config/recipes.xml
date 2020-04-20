@@ -1,0 +1,10 @@
+<JaxTeller718>
+	<append xpath="/recipes" >
+		<recipe name="meleeToolHoeIron" count="1" tags="learnable">
+			<ingredient name="resourceForgedIron" count="16"/>
+			<ingredient name="resourceWood" count="12"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+		</recipe>
+	</append>
+</JaxTeller718>

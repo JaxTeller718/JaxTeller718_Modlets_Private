@@ -1,0 +1,5 @@
+﻿Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+meleeToolHoeIron,items,tool,new,Iron Hoe,houe en fer,Eisenhacke,,Azadón de Hierro
+meleeToolHoeIronDesc,items,tool,new,Indispensable tool for Plowing the land for farming.,Outil indispensable pour le labour de la terre agricole.,Unverzichtbares Werkzeug um das Ackerland zu pflügen.,,Herramienta indispensable para Arar la tierra de cultivo.
+meleeToolHoeIronSchematic,items,tool,new,Iron Hoe Schematic,Schéma de la Houe en fer,Eiserne Hacke Schema,,Esquema del Azadón de Hierro
+

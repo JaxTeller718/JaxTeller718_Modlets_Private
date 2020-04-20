@@ -1,0 +1,91 @@
+<JaxTeller718>
+
+	<append xpath="/items">
+
+		<item name="meleeToolHoeIronSchematic">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="meleeToolHoeIron"/>
+			<property name="Unlocks" value="meleeToolHoeIron"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolHoeIron" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="meleeToolHoeIron"> 
+			<property name="Tags" value="melee,medium,tool,attFortitude,perkLivingOffTheLandCrops,canHaveCosmetic"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="meleeToolHoeIronDesc"/>
+			<property name="HoldType" value="50"/>
+			<property name="Meshfile" value="#Other/Items?Tools/hoe_ironPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="FuelValue" value="250"/>
+			<property name="EconomicValue" value="350"/>
+			<property name="UnlockedBy" value="meleeToolHoeIronSchematic"/>
+			<property name="ShowQuality" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Sphere" value="0.15"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="ToolCategory.cropHarvest" value="1" param1="1"/>
+
+				<property name="UseGrazingHits" value="true"/>
+				<property name="GrazeStart" value=".5"/>
+				<property name="GrazeEnd" value=".55"/>
+				<property name="SwingDegrees" value="65"/>
+				<property name="SwingAngle" value="160"/>
+			</property>
+			<property class="Action1">
+				<!-- UseAction -->
+				<property name="Class" value="Repair"/>
+				<property name="Repair_amount" value="30"/>
+				<property name="Upgrade_hit_offset" value="-4"/>
+				<property name="Sound_start" value="repair_block"/>
+				<property name="Delay" value="1.3"/>
+				<!-- Repair actions still need the delay amount -->
+				<property name="Upgrade_action_sound" value="ImpactSurface/metalhitearth"/>
+				<property name="Allowed_upgrade_items" value="meleeToolHoeIron,resourceClayLump"/>
+			</property>
+			<!-- <property class="Action1">
+		<property name="Class" value="MakeFertile"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Block_range" value="4"/>
+		<property name="DamageBlock" value="1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sound_end" value="repair_block"/>
+		<property name="Fertileblock" value="terrFertileFarmland"/>
+		<property name="Adjacentblock" value="dirt"/>
+	</property> -->
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="2.9"/>
+				<passive_effect name="BlockRange" operation="base_set" value="10"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="10"/>
+				<!-- meleeToolHoeIron -->
+				<passive_effect name="BlockDamage" operation="base_set" value="10"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="-.9" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="-.9" tags="metal"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="49"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="16.1" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+			</effect_group>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="PickupJournalEntry" value="farmingTip"/>
+			<property name="ActionSkillGroup" value="Mining Tools"/>
+			<property name="CraftingSkillGroup" value="craftSkillTools"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+		</item>
+
+	</append>
+
+</JaxTeller718>
